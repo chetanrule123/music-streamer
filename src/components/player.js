@@ -42,7 +42,7 @@ function Player({track, next, prev, play, song, image}) {
                 nob.style.left =pos+"%"            
             }
         }, 500);                
-        slider_con.addEventListener("mousedown",update)
+        slider_con.addEventListener("mouseup",update)
         function update(e) {                       
             var parentPosition = getPosition(e.currentTarget);
             let width = e.clientX-parentPosition.x
