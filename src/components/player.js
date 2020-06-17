@@ -32,7 +32,7 @@ function Player({track, next, prev, play, song, image}) {
         setduration("0:00")
         setSong_state(song.state())
         song.on('load',()=>{setduration(convert(song.duration()));setSong_state(song.state())})
-        song.on('play',()=>{setBtn(pause_btn)})
+        song.on('play',()=>{setduration(convert(song.duration()));setBtn(pause_btn)})
         song.on('pause',()=>{setBtn(play_btn)})
         setInterval(() => {      
             if (song.playing()) {
