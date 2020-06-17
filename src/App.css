@@ -1,37 +1,43 @@
-*{
+* {
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
   transition: 0.2s;
 }
-.center{
+
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.App{
+
+.App {
   position: relative;
   width: 100%;
   height: 100vh;
-  display: flex; 
+  display: flex;
   flex-direction: row;
   overflow: hidden;
 }
-.albums_display{
+
+.albums_display {
   padding: 10px;
   text-align: center;
   width: 25%;
   background: #fff;
   transition: 0.3s ease-in-out;
 }
-.albums_display h2{
+
+.albums_display h2 {
   margin: 30px 0 50px;
 }
-.albums{
+
+.albums {
   flex-direction: column;
 }
-.albums button{
+
+.albums button {
   width: 100px;
   font-size: 15px;
   color: #ffffff;
@@ -43,16 +49,19 @@
   background: rgb(93, 137, 218);
   cursor: pointer;
 }
-.player_con{
+
+.player_con {
   background: rgb(250, 209, 74);
   width: 40%;
   padding: 10px;
 }
-header{
+
+header {
   text-align: center;
   margin: 30px 0 50px;
 }
-.player{
+
+.player {
   border-radius: 20px;
   background: rgb(251, 252, 215);
   height: 500px;
@@ -62,63 +71,76 @@ header{
   display: grid;
   grid-template-rows: 1.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
   text-align: center;
-  box-shadow: -4px -8px 10px rgba(255, 255, 255, 0.4),4px 8px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -4px -8px 10px rgba(255, 255, 255, 0.4), 4px 8px 10px rgba(0, 0, 0, 0.1);
 }
-.player img{
+
+.player img {
   height: 100%;
   width: 100%;
   border-radius: 10px;
   grid-row: 1/2;
 }
-.player h2{
+
+.player h2 {
   grid-row: 2/3;
 }
-.player h3{
+
+.player h3 {
   grid-row: 3/4;
 }
-.player_controls{
+
+.player_controls {
   grid-row: 4/5;
   justify-content: space-evenly;
 }
-.player_controls button{
+
+.player_controls button {
   background: none;
   border: none;
   font-size: 30px;
   cursor: pointer;
 }
-#play_con{
+
+#play_con {
   width: 50px;
   height: 50px;
 }
-#play_con img{
+
+#play_con img {
   width: 100%;
   height: 100%;
 }
-.tracks_display{
+
+.tracks_display {
   padding: 10px;
   transition: 0.3s ease-in-out;
 }
-.tracks_display h2{
+
+.tracks_display h2 {
   text-align: center;
   margin: 30px 0 50px;
 }
-.slider_con{
+
+.slider_con {
   grid-row: 5/6;
   cursor: pointer;
 }
-.slider{
+
+.slider {
   width: 100%;
   height: 10px;
   position: relative;
 }
-.slide{
+
+.slide {
   position: absolute;
   width: 100%;
   height: 5px;
   background: tomato;
   border-radius: 30px;
 }
-.sliding{
+
+.sliding {
   position: absolute;
   background: royalblue;
   left: 0;
@@ -126,7 +148,8 @@ header{
   height: 6px;
   border-radius: 30px 0 0 30px;
 }
-.nob{
+
+.nob {
   position: absolute;
   left: 0;
   width: 10px;
@@ -134,7 +157,8 @@ header{
   background: royalblue;
   border-radius: 50%;
 }
-.track{
+
+.track {
   width: 100%;
   height: 100px;
   display: grid;
@@ -142,68 +166,81 @@ header{
   grid-template-columns: 0.25fr 1.5fr 0.25fr;
   grid-template-rows: 1fr 1fr;
 }
-.track .img{
+
+.track .img {
   width: 100px;
   background: grey;
   grid-row: 1/3;
   grid-column: 1/2;
 }
-.track .img img{
+
+.track .img img {
   width: 100%;
   height: 100%;
 }
-.track_name{
+
+.track_name {
   color: #ffffff;
   background: orange;
   grid-row: 1/2;
   grid-column: 2/3;
 }
-.album_name{
+
+.album_name {
   grid-row: 2/3;
   grid-column: 2/3;
   background: rgb(214, 206, 206);
 }
-.track_name,.album_name{
+
+.track_name,
+.album_name {
   display: flex;
   align-items: center;
   padding: 10px;
 }
-.controls{
+
+.controls {
   background: skyblue;
   width: 70px;
   grid-row: 1/3;
   grid-column: 3/4;
 }
-.controls button{
+
+.controls button {
   background: none;
   border: none;
   font-size: 30px;
 }
-.tracks_display{
+
+.tracks_display {
   background: #fff;
   width: 35%;
 }
-.special_btns{
+
+.special_btns {
   font-size: 30px;
   color: #fff;
   background: royalblue;
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 50%;  
-  transform: translate(0,-50%); 
-  display: none; 
+  top: 50%;
+  transform: translate(0, -50%);
+  display: none;
   transition: 0.2s ease-in-out;
 }
-#alb_btn{  
+
+#alb_btn {
   left: 0;
   border-radius: 0 50px 50px 0;
 }
-#tracks_btn{
+
+#tracks_btn {
   border-radius: 50px 0 0 50px;
   right: 0;
 }
-.caution{
+
+.caution {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -213,55 +250,70 @@ header{
   padding: 10px;
   border-radius: 10px 10px 0 0;
 }
-.caution p{
+
+.caution p {
   margin: 10px;
 }
-.caution_btn{
+
+.caution_btn {
   font-size: 20px;
   color: rgb(252, 249, 117);
   width: 50px;
   background: royalblue;
   height: 25px;
-  border-radius: 50px 50px 0 0 ;
+  border-radius: 50px 50px 0 0;
   margin-top: -45px;
 }
-@media screen and (max-width:1000px){
-  .App{
+
+@media screen and (max-width:1000px) {
+  .App {
     flex-direction: column;
   }
-  .albums_display{
+
+  .albums_display {
     width: 100%;
     position: absolute;
     left: -100%;
     border-radius: 0 0 10px 10px;
     box-shadow: -5px 5px 10px rgb(100, 100, 100);
   }
-  .player_con{
+
+  .player_con {
     width: 100%;
     height: 100%;
   }
-  .tracks_display{
-    width : 100%;
+
+  .sliding {
+    height: 5px;
+  }
+
+  .tracks_display {
+    width: 100%;
     position: absolute;
     right: -100%;
     border-radius: 0 0 10px 10px;
     box-shadow: 5px 5px 10px rgb(100, 100, 100);
   }
-  .special_btns{
+
+  .special_btns {
     display: flex;
   }
-  .caution{
+
+  .caution {
     width: 100%;
   }
 }
-@media screen and (max-width : 500px){
-  #alb_btn{
+
+@media screen and (max-width : 500px) {
+  #alb_btn {
     top: 50px;
   }
-  #tracks_btn{
+
+  #tracks_btn {
     top: 50px;
   }
-  .player{
+
+  .player {
     width: 90%;
     height: 75%;
   }
